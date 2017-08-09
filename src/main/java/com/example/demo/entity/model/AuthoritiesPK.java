@@ -8,13 +8,9 @@ import javax.persistence.Enumerated;
 
 import com.example.demo.entity.enumration.RoleType;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 @Embeddable
 public class AuthoritiesPK implements Serializable {
 	private static final long serialVersionUID = 1L;
