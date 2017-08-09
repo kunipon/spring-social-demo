@@ -23,9 +23,9 @@ import lombok.Setter;
 public class DemoUser {
 	/** ユーザー識別用ID */
 	@Id
-	@GeneratedValue(generator = "guid")
-	@GenericGenerator(name="guid", strategy = "org.hibernate.id.GUIDGenerator")
-	@Column(unique = true, updatable = false)
+	@GeneratedValue(generator = "uuid2")
+	@GenericGenerator(name = "uuid2", strategy = "uuid2")
+	@Column(unique = true, updatable = false, columnDefinition = "BINARY(16)")
 	private String userId;
 
 	@Column(unique = true, nullable = false)
